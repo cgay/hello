@@ -1,0 +1,30 @@
+name: hello-tests
+
+on:
+  push:
+    # all branches
+  pull_request:
+    branches:
+      - main
+      - master
+
+  # This enables the Run Workflow button on the Actions tab.
+  workflow_dispatch:
+
+jobs:
+  test-ubuntu-latest:
+    runs-on: ubuntu-latest
+    steps:
+      # actions/checkout must come first if using the default path since it
+      # seems to delete files in the current directory.
+      - uses: actions/checkout@v2
+
+      # This puts the latest dylan-compiler binary and the opendylan directory
+      # in the current directory.
+      - uses: dylan-lang/install-opendylan@v1
+
+      - name: Build hello-test-suite
+        run: ./dylan-compiler -build -jobs 3 hello-test-suite
+
+      - name: Run hello-test-suite
+        run: _build/bin/hello-test-suite
