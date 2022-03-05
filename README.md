@@ -23,8 +23,11 @@ with an entry for `hello`. See the example `registry` directory in this
 repository.  Similarly, you should add other dependencies as git submodules and
 add registry files for them as well.
 
-See [`install-opendylan`](https://github.com/dylan-lang/install-opendylan) for
-full documentation.
+See also:
+
+*  The [build-and-test.yml](.github/workflows/build-and-test.yml) workflow.
+*  [`install-opendylan`](https://github.com/dylan-lang/install-opendylan) for
+   more documentation.
 
 ## The dylan-lang/install-dylan-tool GitHub Action
 
@@ -39,5 +42,9 @@ Briefly, `dylan-tool` uses the [`pkg.json`](pkg.json) file to find dependencies
 the `registry` directory for you. Then you can invoke `dylan-compiler` as
 normal. (In the future, `dylan-tool` will build and run the tests for you.)
 
-See [`install-dylan-tool`](https://github.com/dylan-lang/install-dylan-tool)
-for full documentation.
+See also:
+
+*  The [build-and-test-pkg.yml](.github/workflows/build-and-test-pkg.yml)
+   workflow.
+*  [`install-dylan-tool`](https://github.com/dylan-lang/install-dylan-tool) for
+   more documentation.
