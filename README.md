@@ -10,14 +10,14 @@ After cloning the repository, simply run `dylan update` to install required pack
 `dylan build -a` to build all workspace libraries, and then run the application and the
 test suite with:
 
-    ```
-    _build/bin/hello-app
-    _build/bin/hello-test-suite
-    ```
+```console
+$ _build/bin/hello-app
+$ _build/bin/hello-test-suite
+```
 
 ## The dylan-lang/install-opendylan GitHub Action
 
-The [`install-opendylan`](https://github.com/dylan-lang/install-opendylan) Action
+The [`install-opendylan`](https://github.com/dylan-lang/install-opendylan) action
 installs the latest release of the Open Dylan compiler and the `dylan` command-line tool.
 
 See
