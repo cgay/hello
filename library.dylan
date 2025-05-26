@@ -9,10 +9,11 @@ define library hello
     hello-impl;
 end library;
 
-// Interface module exports public API.
+// Interface module creates public API, ensuring that an implementation
+//  module exports them.
 define module hello
   create
-    greeting;
+    greeting;                   // Example. Delete me.
 end module;
 
 // Implementation module implements definitions for names created by the
@@ -24,5 +25,5 @@ define module hello-impl
 
   // Additional exports for use by test suite.
   export
-    $greeting;
+    $greeting;                  // Example code. Delete me.
 end module;

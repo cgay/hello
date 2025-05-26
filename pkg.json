@@ -1,9 +1,0 @@
-{
-    "name": "hello",
-    "version": "0.1.0",
-    "url": "https://github.com/cgay/hello",
-    "description": "The traditional Hello World example",
-    "deps": [
-        "testworks@2.0.0"
-    ]
-}

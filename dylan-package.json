@@ -1,0 +1,12 @@
+{
+    "dependencies": [  ],
+    "dev-dependencies": [ "testworks" ],
+    "description": "An example Dylan hello-world application, library, and test suite",
+    "name": "hello",
+    "version": "0.2.0",
+    "url": "https://github.com/cgay/hello",
+    "keywords": [ ],
+    "contact": "dylan-lang@googlegroups.com",
+    "license": "MIT",
+    "license-url": "https://github.com/cgay/hello/blob/main/LICENSE"
+}
