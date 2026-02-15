@@ -20,17 +20,19 @@ jobs:
     steps:
       # actions/checkout must come first if using the default path since it
       # seems to delete files in the current directory.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # This puts the latest "dylan-compiler" and "dylan" binaries in the current
       # directory.
       - uses: dylan-lang/install-opendylan@v3
+        with:
+          tag: v2026.1.0
 
       - name: Update workspace
-        run: dylan update
+        run: deft update
 
       - name: Build test suite
-        run: dylan build hello-test-suite
+        run: deft build hello-test-suite
 
       - name: Run tests
         run: _build/bin/hello-test-suite
